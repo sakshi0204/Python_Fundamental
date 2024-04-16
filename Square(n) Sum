@@ -1,0 +1,6 @@
+def square_sum(numbers):
+    #your code here
+    list2=0
+    for i in numbers:
+        list2=list2+i**2
+    return list2
