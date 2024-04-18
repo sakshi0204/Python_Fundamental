@@ -1,0 +1,24 @@
+def setZeros(matrix: List[List[int]]) -> None:
+	# Write your code here.
+    col=False
+    c=len(matrix[0])
+    R=len(matrix)
+    
+    for i in range(R):
+        if matrix[i][0]==0:
+            col=True
+        for j in range( 1,c):
+            if matrix[i][j]==0:
+                matrix[i][0]=0
+                matrix[0][j]=0
+    for i in range(1,R):
+        for j in range (1,c):
+            if not matrix[i][0] or not matrix[0][j]:
+                matrix[i][j]=0
+    if matrix[0][0]==0:
+        for j in range (c):
+            matrix[0][j]=0
+    if col:
+        for i in range(R):
+            matrix[i][0]=0
+    pass
