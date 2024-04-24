@@ -1,0 +1,84 @@
+You have been given an integer array/list(ARR) of size 'N'. It only contains 0s, 1s and 2s. Write a solution to sort this array/list.
+Note :
+
+Try to solve the problem in 'Single Scan'. ' Single Scan' refers to iterating over the array/list just once or to put it in other words, you will be visiting each element in the array/list just once.
+
+Detailed explanation ( Input/output format, Notes, Images )
+Constraints :
+
+1 <= T <= 10
+1 <= N <= (5 * (10 ^ 5))
+0 <= ARR[i] <= 2
+
+Where 'N' is the size of the given array/list.
+And, ARR[i] denotes the i-th element in the array/list.
+
+Time Limit: 1sec 
+
+Sample Input 1 :
+
+2
+6
+0 1 2 2 1 0
+7
+0 1 2 1 2 1 2
+
+Sample Output 1 :
+
+0 0 1 1 2 2
+0 1 1 1 2 2 2
+
+Sample Input 2 :
+
+2
+7
+2 2 2 1 1 1 0
+6
+2 1 2 0 1 0
+
+
+from os import *
+from sys import *
+from collections import *
+from math import *
+
+from sys import stdin,setrecursionlimit
+setrecursionlimit(10**7)
+
+def sort012(arr, n) :
+
+	# write your code here
+    # don't return anything 
+    arr.sort()
+    pass
+
+
+#taking inpit using fast I/O
+def takeInput() :
+	n = int(input().strip())
+
+	if n == 0 :
+		return list(), 0
+
+	arr = list(map(int, stdin.readline().strip().split(" ")))
+
+	return arr, n
+
+
+
+def printAnswer(arr, n) :
+    
+    for i in range(n) :
+        
+        print(arr[i],end=" ")
+        
+    print()
+    
+#main
+
+t = int(input().strip())
+for i in range(t) :
+
+    arr, n= takeInput()
+    sort012(arr, n)
+    printAnswer(arr, n)
