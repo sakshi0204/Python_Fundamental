@@ -1,0 +1,10 @@
+def domain_name(url):
+    domain = url.split("//")[-1]
+    
+    # Remove "www." if present
+    domain = domain.split("www.")[-1]
+    
+    # Remove path if present
+    domain = domain.split("/")[0]
+    
+    return domain.split(".")[0]
