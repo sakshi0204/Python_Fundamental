@@ -1,0 +1,9 @@
+def move_zeros(lst):
+    l1=[]
+    l2=[]
+    for i in lst:
+        if i !=0:
+            l1.append(i)
+        else:
+            l2.append(i)
+    return l1+l2
