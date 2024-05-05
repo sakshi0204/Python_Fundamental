@@ -1,0 +1,16 @@
+def increment_string(strng):
+    # Extract prefix and suffix
+    prefix = strng.rstrip('0123456789')
+    suffix = strng[len(prefix):]
+
+    # Increment numeric suffix
+    if suffix.isdigit():
+        # Handle leading zeros
+        new_suffix = str(int(suffix) + 1).zfill(len(suffix))
+        if len(new_suffix) > len(suffix):  # Check if carry-over occurred
+            prefix = increment_string(prefix)  # Increment the prefix if needed
+    else:
+        new_suffix = '1'
+
+    new_str = prefix + new_suffix
+    return new_str
