@@ -1,0 +1,12 @@
+import math
+from os import *
+from sys import *
+from collections import *
+
+#Your code goes here
+
+principal = int(input())
+time = float(input())
+rate = float(input())
+si = (principal * rate * time) / 100
+print(math.floor(si))
