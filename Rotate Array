@@ -1,0 +1,4 @@
+def rotateArray(arr: list, k: int) -> list:
+    # Write your code here.
+    return arr[k:]+arr[0:k]
+    pass
