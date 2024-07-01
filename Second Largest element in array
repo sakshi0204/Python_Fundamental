@@ -1,0 +1,32 @@
+Brute force code:
+def findSecondLargest(sequenceOfNumbers):
+    # Write your code here.
+    sequenceOfNumbers=list(set(sequenceOfNumbers))
+    if (len(sequenceOfNumbers)<2):
+        return -1
+    for i in range(len(sequenceOfNumbers)):
+        for j in range(i+1,len(sequenceOfNumbers)):
+            if (sequenceOfNumbers[i]<sequenceOfNumbers[j]):
+                temp=sequenceOfNumbers[j]
+                sequenceOfNumbers[j]=sequenceOfNumbers[i]
+                sequenceOfNumbers[i]=temp
+    
+    return sequenceOfNumbers[1]
+
+Optimize code:
+def findSecondLargest(sequenceOfNumbers):
+    # Write your code here.
+    sequenceOfNumbers=list(set(sequenceOfNumbers))
+    if (len(sequenceOfNumbers)<2):
+        return -1
+    max_num=sequenceOfNumbers[0]
+    second_max=-1
+    for i in (sequenceOfNumbers):
+        if i>max_num:
+            second_max=max_num
+            max_num=i
+        elif i<max_num and i>second_max:
+            second_max=i
+        
+    return second_max
+
