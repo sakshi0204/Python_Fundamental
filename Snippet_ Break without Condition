@@ -1,0 +1,9 @@
+ Problem statement
+
+What will be the output of the following code?
+
+for i in range(1,5):
+    break
+    print(i,end = " ")
+Solution description
+After entering into the loop we are performing a break immediately so control will come out of the loop and nothing will be printed.
