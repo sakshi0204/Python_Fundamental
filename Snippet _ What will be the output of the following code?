@@ -1,0 +1,15 @@
+What will be the output of the following code?
+
+for i in range(0,2,-1):
+   print("Hello")
+
+Solution: 
+
+To illustrate this, let's try to break down the sequence generation:
+
+    Start at 0
+    Decrement by 1, so the next value would be -1
+    But wait, we're supposed to stop before 2, and -1 is already less than 2, so we can't generate any more values.
+
+As a result, the sequence is empty, and the loop doesn't execute.
+
