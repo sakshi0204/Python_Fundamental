@@ -6,3 +6,5 @@ i = 0
 while(i < 5):
     print(i,end = " ")
  
+Solution description
+In the above code snippet we’re not increasing the value of i so the loop will run infinite times.
