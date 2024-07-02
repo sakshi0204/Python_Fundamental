@@ -1,0 +1,11 @@
+What will be the output of the following code?
+
+i = 0
+while i < 5:
+    if i == 2:
+        continue
+    else:
+        print(i,end = " ")   
+        i += 1
+Solution description
+In the above code snippet when the value of i will be equal to 2 then we are performing a continue but not incrementing the value of i will be equal to 2 again and again which results in a Runtime Error.
